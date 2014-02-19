@@ -20,7 +20,7 @@ module PrimeNumbers
     end
 
     def headings
-      [''] + prime_numbers
+      ['x'] + prime_numbers
     end
 
     def prime_numbers
