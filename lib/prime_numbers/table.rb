@@ -1,5 +1,5 @@
-require "terminal-table"
-require "prime"
+require 'terminal-table'
+require 'prime_numbers/generator'
 
 module PrimeNumbers
   class Table
@@ -14,22 +14,23 @@ module PrimeNumbers
     end
 
     private
+
     def table
       Terminal::Table.new(headings: headings, rows: rows)
     end
 
     def headings
-      [""] + prime_numbers
+      [''] + prime_numbers
     end
 
     def prime_numbers
-      Prime.first(n)
+      Generator.first(n)
     end
 
     def rows
-      prime_numbers.map { |row|
+      prime_numbers.map do |row|
         [row] + prime_numbers.map { |column| row * column }
-      }
+      end
     end
   end
 end

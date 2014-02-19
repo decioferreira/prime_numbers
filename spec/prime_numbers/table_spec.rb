@@ -1,12 +1,12 @@
-require "spec_helper"
-require "prime_numbers/table"
+require 'spec_helper'
+require 'prime_numbers/table'
 
 describe PrimeNumbers::Table do
-  describe "#to_s" do
-    context "with default n of 10" do
+  describe '#to_s' do
+    context 'with default n of 10' do
       subject { PrimeNumbers::Table.new }
 
-      it {
+      it do
         expect(subject.to_s).to eq(<<-EOS.gsub(/^\s*|\n$/, ''))
           +----+----+----+-----+-----+-----+-----+-----+-----+-----+-----+
           |    | 2  | 3  | 5   | 7   | 11  | 13  | 17  | 19  | 23  | 29  |
@@ -23,13 +23,13 @@ describe PrimeNumbers::Table do
           | 29 | 58 | 87 | 145 | 203 | 319 | 377 | 493 | 551 | 667 | 841 |
           +----+----+----+-----+-----+-----+-----+-----+-----+-----+-----+
         EOS
-      }
+      end
     end
 
-    context "with n of 3" do
+    context 'with n of 3' do
       subject { PrimeNumbers::Table.new(3) }
 
-      it {
+      it do
         expect(subject.to_s).to eq(<<-EOS.gsub(/^\s*|\n$/, ''))
           +---+----+----+----+
           |   | 2  | 3  | 5  |
@@ -39,7 +39,7 @@ describe PrimeNumbers::Table do
           | 5 | 10 | 15 | 25 |
           +---+----+----+----+
         EOS
-      }
+      end
     end
   end
 end
