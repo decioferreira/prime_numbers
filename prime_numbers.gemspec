@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = PrimeNumbers::VERSION
   spec.authors       = ["Décio Ferreira"]
   spec.email         = ["decio.ferreira@decioferreira.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Calculates and prints out a multiplication table of prime numbers.}
+  spec.description   = %q{Calculates and prints out a multiplication table of prime numbers.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -18,6 +18,12 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
+  spec.add_runtime_dependency "terminal-table"
+
   spec.add_development_dependency "bundler", "~> 1.5"
   spec.add_development_dependency "rake"
+
+  spec.add_development_dependency "cucumber"
+  spec.add_development_dependency "aruba"
+  spec.add_development_dependency "rspec"
 end

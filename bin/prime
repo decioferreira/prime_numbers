@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH << './lib'
+require 'prime_numbers/table'
+
+if ARGV[0]
+  table = PrimeNumbers::Table.new(ARGV[0].to_i)
+else
+  table = PrimeNumbers::Table.new
+end
+
+puts table
