@@ -1,6 +1,8 @@
 # PrimeNumbers
 
-TODO: Write a gem description
+[![Build Status](https://travis-ci.org/decioferreira/prime_numbers.png?branch=master)](https://travis-ci.org/decioferreira/prime_numbers)
+
+Calculates and prints out a multiplication table of prime numbers.
 
 ## Installation
 
@@ -18,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    $ ./bin/prime [n]
 
 ## Contributing
 
